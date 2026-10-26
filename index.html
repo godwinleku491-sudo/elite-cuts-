@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Cuts | Barber Shop</title>
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gold: #e8b84f;
+  --black: #080b0d;
+  --panel: #15191b;
+  --white: #f7f7f7;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+header {
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #292929;
+  gap: 12px;
+}
+
+.brand { color: var(--gold); font-weight: bold; }
+.brand strong { display: block; font-size: 21px; letter-spacing: 3px; }
+.brand small { letter-spacing: 2px; font-size: 10px; }
+
+nav { display: flex; gap: 16px; flex-wrap: wrap; }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 380px;
+  background: linear-gradient(90deg, #090b0c 20%, #17120b 100%);
+}
+
+.hero-copy { padding: 40px 8%; }
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+h1 { font-size: clamp(36px, 5vw, 62px); line-height: 1.08; margin: 18px 0; }
+.gold { color: var(--gold); }
+.hero-copy p { color: #ddd; margin-bottom: 24px; }
+
+.hero-image {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.button {
+  display: inline-block;
+  background: var(--gold);
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 12px 22px;
+}
+
+section { padding: 42px 6%; }
+
+.section-heading { text-align: center; margin-bottom: 25px; }
+.section-heading h2 { font-size: 27px; }
+.section-heading p { color: #bbb; }
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid #5b4828;
+  border-radius: 9px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content { padding: 13px 9px; }
+.card h3 { color: var(--gold); font-size: 16px; }
+.card p { font-size: 13px; color: #ddd; margin: 5px 0 12px; }
+.price {
+  display: block;
+  background: var(--gold);
+  color: #111;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #121719;
+  padding: 0;
+  align-items: center;
+}
+
+.about img { width: 100%; height: 330px; object-fit: cover; }
+.about-copy { padding: 30px; }
+.about-copy h2 { font-size: 30px; margin: 8px 0; }
+.about-copy p { color: #ddd; margin-top: 12px; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+.contact-grid > div { padding: 12px; }
+.contact-grid p { color: #ddd; font-size: 14px; }
+
+footer {
+  text-align: center;
+  padding: 22px 12px;
+  border-top: 1px solid #292929;
+  color: #aaa;
+  font-size: 13px;
+}
+
+@media (max-width: 650px) {
+  header { align-items: flex-start; flex-direction: column; }
+  nav { gap: 14px; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-copy { padding: 38px 7%; }
+  .hero-image { height: 250px; }
+  .services { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .card img { height: 125px; }
+  .about { grid-template-columns: 1fr; }
+  .about img { height: 240px; }
+  .about-copy { padding: 25px 7%; }
+  .contact-grid { grid-template-columns: 1fr; gap: 8px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    <strong>✂ ELITE CUTS</strong>
+    <small>BARBER SHOP</small>
+  </div>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#services">SERVICES</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero" id="home">
+    <div class="hero-copy">
+      <div class="eyebrow">LOOK SHARP. FEEL CONFIDENT.</div>
+      <h1>Your Style.<br><span class="gold">Your Identity.</span></h1>
+      <p>Fresh cuts, clean fades and expert grooming. Discover your best look with us.</p>
+      <a class="button" href="#contact">Book on WhatsApp</a>
+    </div>
+
+    <img class="hero-image"
+      src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=85"
+      alt="Professional barbershop">
+  </div>
+
+  <section id="services">
+    <div class="section-heading">
+      <h2>— OUR SERVICES —</h2>
+      <p>Quality grooming at affordable prices.</p>
+    </div>
+
+    <div class="services">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=500&q=80" alt="Classic haircut">
+        <div class="card-content">
+          <h3>Classic Haircut</h3>
+          <p>Clean, stylish and perfectly finished.</p>
+        </div>
+        <span class="price">2,000 XAF</span>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=500&q=80" alt="Fade haircut">
+        <div class="card-content">
+          <h3>Fade Haircut</h3>
+          <p>Modern fades with sharp details.</p>
+        </div>
+        <span class="price">2,500 XAF</span>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=500&q=80" alt="Barber grooming">
+        <div class="card-content">
+          <h3>Beard Grooming</h3>
+          <p>Professional trimming and shaping.</p>
+        </div>
+        <span class="price">1,000 XAF</span>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&q=80" alt="Barber shop service">
+        <div class="card-content">
+          <h3>Haircut + Beard</h3>
+          <p>A complete, fresh look.</p>
+        </div>
+        <span class="price">3,000 XAF</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <img
+      src="https://images.unsplash.com/photo- barber?auto=format&fit=crop&w=900&q=80"
+      alt="Our barbershop interior"
+      onerror="this.style.display='none'">
+
+    <div class="about-copy">
+      <div class="eyebrow">ABOUT US</div>
+      <h2>Why Choose <span class="gold">Us?</span></h2>
+      <p><strong>Skilled service. Clean tools. Great style.</strong></p>
+      <p>We believe a great haircut is more than looking good. Our goal is to give you a fresh style in a clean and welcoming environment.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-heading">
+      <h2>— VISIT OUR SHOP —</h2>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <h3 class="gold">Location</h3>
+        <p>Add your town or neighborhood.</p>
+      </div>
+      <div>
+        <h3 class="gold">Opening Hours</h3>
+        <p>Monday – Saturday</p>
+        <p>8:00 AM – 7:00 PM</p>
+      </div>
+      <div>
+        <a class="button" href="https://wa.me/237679129682">Book on WhatsApp</a>
+        <p>Call or message for an appointment.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Elite Cuts Barber Shop. All rights reserved.</footer>
+
+</body>
+</html>
